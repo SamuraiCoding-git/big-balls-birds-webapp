@@ -5,11 +5,13 @@ body, html {
 }
 
 #background-video {
-    position: fixed;
+    width: 80%; /* Процент ширины страницы, который будет занимать видео */
+    height: auto; /* Высота будет автоматически рассчитываться на основе ширины */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Keeps the video behind other content */
+    transform: translate(-50%, -50%); /* Центрирование видео на странице */
+    aspect-ratio: 4 / 5; /* Соотношение сторон 4:5 */
 }
 
 #invisible-button {
