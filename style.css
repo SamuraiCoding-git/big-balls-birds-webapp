@@ -5,13 +5,11 @@ body, html {
 }
 
 #background-video {
-    width: 360px; /* Фиксированная ширина 360 пикселей */
-    height: 640px; /* Фиксированная высота 640 пикселей */
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Центрирование видео на странице */
-    z-index: 0; /* Установка на задний план относительно других элементов */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Keeps the video behind other content */
 }
 
 #invisible-button {
@@ -25,6 +23,21 @@ body, html {
     cursor: default;
     z-index: 1; /* Убедитесь, что кнопка находится над другими элементами, но ниже любых элементов, с которыми должен взаимодействовать пользователь */
 }
+
+#play-button {
+    position: absolute;
+    top: 50%; /* Центр видео по вертикали */
+    left: 50%; /* Центр видео по горизонтали */
+    width: 100px; /* Размер кнопки, достаточный для удобного нажатия */
+    height: 100px;
+    transform: translate(-50%, -50%); /* Центрирование кнопки */
+    background: transparent; /* Прозрачный фон */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Курсор в виде указателя для обозначения интерактивности */
+    opacity: 0; /* Сделать кнопку полностью прозрачной */
+    z-index: 2; /* Убедиться, что кнопка расположена над видео */
+}
+
 
 .content {
     position: absolute;
