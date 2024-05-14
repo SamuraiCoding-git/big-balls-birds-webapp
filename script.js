@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const clouds = document.querySelectorAll('.cloud');
     const soonText = document.querySelector('.soon-text'); // Get the Soon text element
-    const playButton = document.getElementById('playButton');
-    const backgroundMusic = document.getElementById('backgroundMusic');
 
     // Initially center the "Soon" text to prevent it from jumping
     soonText.style.transform = 'translate(-50%, -50%)';
@@ -18,13 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         animateCloud(cloud, randomSize);
     });
 
-    // Play the music when the invisible button is tapped
-    playButton.addEventListener('click', function () {
-        // Check if the music is already playing
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-        }
-    });
 
     function animateCloud(cloud, size) {
         const direction = Math.random() > 0.5 ? 1 : -1; // Choose direction
