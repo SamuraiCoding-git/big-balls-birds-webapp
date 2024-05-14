@@ -12,8 +12,8 @@ body, html {
 
 .container {
     position: relative;
-    width: 450px; /* Fixed width */
-    height: 800px; /* Fixed height */
+    width: 675px; /* Fixed width */
+    height: 1200px; /* Fixed height */
     overflow: hidden; /* Ensures nothing goes outside the bounds */
     background: url('assets/photos/background.jpg') no-repeat center center;
     background-size: cover;
@@ -26,7 +26,7 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%; /* Adjusted size */
+    width: 50%; /* Adjusted size */
     z-index: 10;
 }
 
