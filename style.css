@@ -12,7 +12,17 @@ body, html {
     z-index: -1; /* Keeps the video behind other content */
 }
 
-
+#invisible-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: default;
+    z-index: 1; /* Убедитесь, что кнопка находится над другими элементами, но ниже любых элементов, с которыми должен взаимодействовать пользователь */
+}
 
 .content {
     position: absolute;
