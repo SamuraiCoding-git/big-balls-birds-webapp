@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Background Music Player</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+ 
+        h1 {
+            color: green;
+        }
+ 
+        .btn {
+            cursor: pointer;
+            border: 1px solid #3498db;
+            background-color: transparent;
+            height: 50px;
+            width: 200px;
+            color: #3498db;
+            font-size: 1.5em;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+        }
+    </style>
 </head> 
 <body>
     <div class="video-container">
@@ -20,6 +42,7 @@
         <source src="assets/audio/background.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <button class="btn"></button>
 
 </body>
 </html>
