@@ -6,12 +6,28 @@
     <title>Video Background Music Player</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    // Get the video and audio elements by their IDs
+    const video = document.getElementById('background-video');
+    const audio = document.getElementById('background-music');
+
+    // Define the togglePlay function
+    function togglePlay() {
+        if (video.paused) {  // Check if the video is paused
+            video.play();   // Play the video
+            audio.play();   // Play the audio
+        } else {
+            video.pause();  // Pause the video
+            audio.pause();  // Pause the audio
+        }
+    }
+</script> 
 <body>
 <video id="background-video" autoplay loop muted>
     <source src="assets/video/background.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-<button id="invisible-button"></button>
+<button id="play-button" onclick="togglePlay()"></button>
 <audio id="background-music" autoplay loop>
     <source src="assets/audio/background.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
